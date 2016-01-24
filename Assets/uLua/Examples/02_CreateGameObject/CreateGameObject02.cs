@@ -8,8 +8,10 @@ public class CreateGameObject02 : MonoBehaviour {
             luanet.load_assembly('UnityEngine')
             GameObject = UnityEngine.GameObject
             ParticleSystem = UnityEngine.ParticleSystem
+            BoxCollider = UnityEngine.BoxCollider
             local newGameObj = GameObject('NewObj')
             newGameObj:AddComponent(ParticleSystem.GetClassType())
+            newGameObj:AddComponent(BoxCollider.GetClassType())
         ";
 
 	//非反射调用
